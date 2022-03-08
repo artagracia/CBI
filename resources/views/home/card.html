@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<TITLE>Profile Card</TITLE>
+	<link rel="stylesheet" type="text/css" href="#">
+	<script type="text/javascript" src="https://kit.fontawesome.com/e25b852c87.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container-1{
+	position: absolute;
+	top: 200%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 263px;
+	background: #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0,0,0,.3);
+	overflow: hidden;
+}
+
+.profile-1{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("https://www.enwallpaper.com/wp-content/uploads/2d95e5886fc4c65a6778b5fee94a7d59-scaled.jpg") center/ cover;
+	transition: .5s;
+}
+
+
+.text-1{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 200px;
+	background: #fff;
+	transform: translateY(230px);
+	transition: .5s;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.text-1 #names{
+	margin-top: 10px;
+	display: flex;
+}
+
+.content-1{
+	text-align: center;
+	font-size: .8rem;
+	padding: 5px;
+	color: #bfbfbf;
+	opacity: 0;
+	transition: .5s ease;
+}
+
+#names span{
+	display: block;
+	transition: .7s cubic-bezier(.75, -1, 0, 1.15);
+	margin: 2px;
+}
+
+#names span:nth-child(1){
+	transform: translateX(-240px);
+}
+
+#names span:nth-child(2){
+	transform: translateX(240px);
+}
+
+.links-1{
+	display: flex;
+	margin-top: 20px;
+}
+
+.links-1 a{
+	text-decoration: none;
+	display: block;
+	margin: 5px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	font-size: 1.2rem;
+	color: #fff;
+	transition: .7s cubic-bezier(.75, -1, 0, 1.15);
+}
+
+.links-1 a:nth-child(1){
+	background: #dd2a7b;
+	transform: translateX(-200px);
+}
+
+.links-1 a:nth-child(2){
+	background: #26242e;
+	transform: translateY(200px);
+}
+
+.links-1 a:nth-child(3){
+	background: #0077b5;
+	transform: translateX(200px);
+}
+
+.container-1:hover .text-1{
+	transform: translateY(0);
+}
+
+.container-1:hover .profile-1{
+	transform: translateY(-70px) scale(1.1);
+}
+
+.container-1:hover #names span{
+	transform: translateX(0);
+	transition-delay: .5s;
+}
+
+.container-1:hover .content-1{
+	opacity: 1;
+	transition-delay: 1.5s;
+}
+
+.container-1:hover .links-1 a{
+	transform: translate(0,0);
+	transition-delay: .5s;
+}
+
+</style>
+<body>
+	<div class="container-1">
+		<div class="col-xl-3 col-lg-3 col-md-6">
+			<div class="profile-1"></div>
+			<div class="text-1">
+				<p id="names"><span>Inpows Profile</span></p>
+				<p class="content-1">Name</p>
+				<div class="links-1">
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
